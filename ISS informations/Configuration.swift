@@ -23,7 +23,6 @@ struct Configuration {
     static let httpMethod = "GET"
     static let host = "api.open-notify.org"
     static let port = 80
-    
     static let slash = "/"
 }
 
@@ -32,4 +31,3 @@ struct IssData {
     static let peopleInSpace = "astros.json"
     static let issPass = "iss-pass.json"
 }
-

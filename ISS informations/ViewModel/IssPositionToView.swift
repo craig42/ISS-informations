@@ -11,18 +11,15 @@ import MapKit
 
 class IssPositionToView {
     var coordinate = CLLocationCoordinate2D()
-    
-    func getIssPosition(callback : @escaping (CLLocationCoordinate2D)-> Void) {
+    func getIssPosition(callback : @escaping (CLLocationCoordinate2D) -> Void) {
         let httpService = HttpService<IssJSONPosition>()
-        httpService.getIssData(forData: IssData.issPosition, param: nil, callback: {
-            statusCode in
+        httpService.getIssData(forData: IssData.issPosition, param: nil, callback: { statusCode in
             if statusCode == StatusCode.success {
                 let data = httpService.data
                 if let latitude = data?.issPosition.latitude,
                     let longitude = data?.issPosition.longitude,
                     let latitudeD = Double(latitude),
                     let longitudeD = Double(longitude) {
-                    
                     self.coordinate.latitude = latitudeD
                     self.coordinate.longitude = longitudeD
                     if CLLocationCoordinate2DIsValid(self.coordinate) {
@@ -33,4 +30,3 @@ class IssPositionToView {
         })
     }
 }
-

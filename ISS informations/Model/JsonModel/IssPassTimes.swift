@@ -12,7 +12,7 @@ struct IssPassTimes: Codable {
 }
 
 struct Request: Codable {
-    let altitude, datetime : Int
+    let altitude, datetime: Int
     let latitude, longitude: Double
     let passes: Int
 }

@@ -9,5 +9,5 @@
 import Foundation
 
 protocol Path {
-    var path :String { get }
+    var path: String { get }
 }

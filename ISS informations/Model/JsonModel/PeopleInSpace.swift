@@ -17,4 +17,3 @@ struct PeopleInSpace: Codable {
 struct Person: Codable {
     let craft, name: String
 }
-

@@ -9,7 +9,7 @@
 import XCTest
 @testable import ISS_informations
 
-class ISS_informationsTests: XCTestCase {
+class IssInformationsTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

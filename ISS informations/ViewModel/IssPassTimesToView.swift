@@ -20,27 +20,24 @@ class IssPassTimesToView {
             }
         }
     }
-    var issPassTimeCallback : ((String, Int) -> Void)?
+    var issPassTimeCallback: ((String, Int) -> Void)?
     var callIssPassTimes = false
     var textToDisplay = ""
     var numberOfLines = 0
     var localTimeZoneAbbreviation: String { return TimeZone.current.abbreviation() ?? "" }
     var isCorrectLocation: Bool { return userLocation.longitude != 0.0 && userLocation.latitude != 0.0 }
-    
     func getIssPassTimes(callback : @escaping (String, Int) -> Void) {
         startLocationServices()
         callIssPassTimes = true
         issPassTimeCallback = callback
     }
-    
     func getIssPassTimesWhenLocation (callback : @escaping (String, Int) -> Void) {
         self.callIssPassTimes = false
         let httpService = HttpService<IssPassTimes>()
         var param = [String: String]()
         param["lat"] = String(userLocation.latitude)
         param["lon"] = String(userLocation.longitude)
-        httpService.getIssData(forData: IssData.issPass, param: param, callback: {
-            statusCode in
+        httpService.getIssData(forData: IssData.issPass, param: param, callback: { statusCode in
             if statusCode == StatusCode.success {
                 if let data = httpService.data {
                     self.textToDisplay = "There is \(data.request.passes) passes : \n"
@@ -55,19 +52,16 @@ class IssPassTimesToView {
             }
         })
     }
-    
     func startLocationServices () {
         locationServices.run(callback: locationCallback(location:))
     }
-    
-    func locationCallback (location:CLLocation?) {
+    func locationCallback (location: CLLocation?) {
         if let location = location {
             userLocation.latitude = location.coordinate.latitude
             userLocation.longitude = location.coordinate.longitude
         }
     }
-    
-    func formatDate(_ unixDate:Int) -> String {
+    func formatDate(_ unixDate: Int) -> String {
         let formatter = DateComponentsFormatter()
         formatter.unitsStyle = DateComponentsFormatter.UnitsStyle.full
 
