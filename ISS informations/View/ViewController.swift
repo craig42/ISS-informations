@@ -43,6 +43,15 @@ class ViewController: UIViewController, MKMapViewDelegate {
                 self.peopleInSpaceLabel.numberOfLines = numberOfLines
             }
         })
+        
+        let issPassTime = IssPassTimesToView()
+        issPassTime.getIssPassTimes(callback: {
+            passTimeText, numberOfLines in
+                DispatchQueue.main.async {
+                    self.issUpcoming.text = passTimeText
+                    self.issUpcoming.numberOfLines = numberOfLines
+            }
+        })
     }
 
 }
