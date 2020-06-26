@@ -34,7 +34,7 @@ class IssPassTimesToView {
     }
     
     func getIssPassTimesWhenLocation (callback : @escaping (String, Int) -> Void) {
-        startLocationServices()
+        self.callIssPassTimes = false
         let httpService = HttpService<IssPassTimes>()
         var param = [String: String]()
         param["lat"] = String(userLocation.latitude)
@@ -50,7 +50,6 @@ class IssPassTimesToView {
                         self.textToDisplay += "while \(response.duration) seconds\n"
                         self.numberOfLines += 1
                     }
-                    self.callIssPassTimes = false
                     callback(self.textToDisplay, self.numberOfLines)
                 }
             }

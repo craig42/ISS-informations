@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		443A90BD24A647E700D6A92D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A90BC24A647E700D6A92D /* AppDelegate.swift */; };
 		443A90BF24A647E700D6A92D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A90BE24A647E700D6A92D /* SceneDelegate.swift */; };
-		443A90C124A647E700D6A92D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A90C024A647E700D6A92D /* ViewController.swift */; };
+		443A90C124A647E700D6A92D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A90C024A647E700D6A92D /* MainView.swift */; };
 		443A90C424A647E700D6A92D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443A90C224A647E700D6A92D /* Main.storyboard */; };
 		443A90C624A647E800D6A92D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 443A90C524A647E800D6A92D /* Assets.xcassets */; };
 		443A90C924A647E800D6A92D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443A90C724A647E800D6A92D /* LaunchScreen.storyboard */; };
@@ -49,7 +49,7 @@
 		443A90B924A647E700D6A92D /* ISS informations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ISS informations.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		443A90BC24A647E700D6A92D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		443A90BE24A647E700D6A92D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		443A90C024A647E700D6A92D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		443A90C024A647E700D6A92D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		443A90C324A647E700D6A92D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		443A90C524A647E800D6A92D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		443A90C824A647E800D6A92D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -166,7 +166,7 @@
 		443A90ED24A6481500D6A92D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				443A90C024A647E700D6A92D /* ViewController.swift */,
+				443A90C024A647E700D6A92D /* MainView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -328,7 +328,7 @@
 				443A90F924A64E4600D6A92D /* IssPosition.swift in Sources */,
 				44BB19B124A6971900FBC52C /* LocationServices.swift in Sources */,
 				443A90F424A64A7500D6A92D /* Configuration.swift in Sources */,
-				443A90C124A647E700D6A92D /* ViewController.swift in Sources */,
+				443A90C124A647E700D6A92D /* MainView.swift in Sources */,
 				443A90BD24A647E700D6A92D /* AppDelegate.swift in Sources */,
 				443A90FB24A6507700D6A92D /* PeopleInSpace.swift in Sources */,
 				443A910124A6771700D6A92D /* IssPositionToView.swift in Sources */,
