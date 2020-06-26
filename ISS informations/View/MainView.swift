@@ -15,10 +15,10 @@ class ViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet var peopleInSpaceLabel: UILabel!
     @IBOutlet var issUpcoming: UILabel!
     
+    // https://github.com/public-apis/public-apis
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         mapView.delegate = self
         
         let issPosition = IssPositionToView()
