@@ -12,7 +12,7 @@ import MapKit
 class ViewController: UIViewController, MKMapViewDelegate {
 
     @IBOutlet var mapView: MKMapView!
-    @IBOutlet var peopleInSpace: UILabel!
+    @IBOutlet var peopleInSpaceLabel: UILabel!
     @IBOutlet var issUpcoming: UILabel!
     
     
@@ -20,8 +20,6 @@ class ViewController: UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         mapView.delegate = self
-        print("TEST")
-        
         
         let issPosition = IssPositionToView()
         issPosition.getIssPosition(callback: {
@@ -35,6 +33,15 @@ class ViewController: UIViewController, MKMapViewDelegate {
                 self.mapView.setRegion(region, animated: true)
             }
 
+        })
+        
+        let peopleInSpace = PeopleInSpaceToView()
+        peopleInSpace.getPeopleInSpace(callback: {
+            peopleText, numberOfLines in
+            DispatchQueue.main.async {
+                self.peopleInSpaceLabel.text = peopleText
+                self.peopleInSpaceLabel.numberOfLines = numberOfLines
+            }
         })
     }
 

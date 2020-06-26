@@ -84,7 +84,7 @@
                     <connections>
                         <outlet property="issUpcoming" destination="K06-md-y4d" id="xGD-Fs-Fup"/>
                         <outlet property="mapView" destination="gHa-g9-sfq" id="Wmx-1f-8p1"/>
-                        <outlet property="peopleInSpace" destination="b8U-y2-tlQ" id="0EP-Qe-cPr"/>
+                        <outlet property="peopleInSpaceLabel" destination="b8U-y2-tlQ" id="neT-a5-M8l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
