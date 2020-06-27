@@ -20,7 +20,7 @@ struct Configuration {
     static let slash = "/"
 }
 
-struct IssData {
+struct Endpoints {
     static let issPosition = "iss-now.json"
     static let peopleInSpace = "astros.json"
     static let issPass = "iss-pass.json"

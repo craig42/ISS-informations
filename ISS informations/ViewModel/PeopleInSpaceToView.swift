@@ -13,7 +13,7 @@ class PeopleInSpaceToView {
     var numberOfLines = 0
     func getPeopleInSpace (callback : @escaping (String, Int) -> Void) {
         let httpService = HttpService<PeopleInSpace>()
-        httpService.getIssData(forData: IssData.peopleInSpace, param: nil, callback: { statusCode in
+        httpService.getIssData(forData: Endpoints.peopleInSpace, param: nil, callback: { statusCode in
             if statusCode == StatusCode.success {
                 let data = httpService.data
                 if let data = data {
