@@ -22,7 +22,7 @@ class HttpService<T: Codable> {
             }
         })
     }
-    func getIssData(forData: String, param: [String: String]?, callback: @escaping (Int) -> Void) {
+    func getIssData(forData: String, param: [String: String]?, callback: @escaping (StatusCode) -> Void) {
         getRequest(path: forData, param: param, callback: { success in
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase

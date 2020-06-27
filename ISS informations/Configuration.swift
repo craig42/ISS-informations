@@ -8,14 +8,8 @@
 
 import Foundation
 
-struct StatusCode {
-    static let success = 0
-    static let error = 1
-    static let notUpdated = 2
-    static let locationProblem = 3
-    static let alreadyUpdated = 4
-    static let connectionProblem = 5
-    static let openWeatherMapProblem = 6
+enum StatusCode: Int {
+    case success = 0, error, notUpdated, locationProblem, alreadyUpdated, connectionProblem
 }
 
 struct Configuration {

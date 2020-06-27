@@ -24,7 +24,7 @@ class HttpRequest {
         }
         return urlComponents.url!
     }
-    static func getHttp(url: URL, body: String, callback : @escaping (String, String, Int) -> Void ) {
+    static func getHttp(url: URL, body: String, callback : @escaping (String, String, StatusCode) -> Void ) {
         var request = URLRequest(url: url)
         request.httpMethod = Configuration.httpMethod
         let postString = body
