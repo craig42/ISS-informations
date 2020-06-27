@@ -13,8 +13,8 @@
 		443A90C424A647E700D6A92D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443A90C224A647E700D6A92D /* Main.storyboard */; };
 		443A90C624A647E800D6A92D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 443A90C524A647E800D6A92D /* Assets.xcassets */; };
 		443A90C924A647E800D6A92D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443A90C724A647E800D6A92D /* LaunchScreen.storyboard */; };
-		443A90D424A647E800D6A92D /* ISS_informationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A90D324A647E800D6A92D /* ISS_informationsTests.swift */; };
-		443A90DF24A647E800D6A92D /* ISS_informationsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A90DE24A647E800D6A92D /* ISS_informationsUITests.swift */; };
+		443A90D424A647E800D6A92D /* IssInformationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A90D324A647E800D6A92D /* IssInformationsTests.swift */; };
+		443A90DF24A647E800D6A92D /* IssInformationsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A90DE24A647E800D6A92D /* IssInformationsUITests.swift */; };
 		443A90F224A6482000D6A92D /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A90F124A6482000D6A92D /* HttpRequest.swift */; };
 		443A90F424A64A7500D6A92D /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A90F324A64A7500D6A92D /* Configuration.swift */; };
 		443A90F624A64BCD00D6A92D /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A90F524A64BCD00D6A92D /* HttpService.swift */; };
@@ -55,10 +55,10 @@
 		443A90C824A647E800D6A92D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		443A90CA24A647E800D6A92D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		443A90CF24A647E800D6A92D /* ISS informationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ISS informationsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		443A90D324A647E800D6A92D /* ISS_informationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISS_informationsTests.swift; sourceTree = "<group>"; };
+		443A90D324A647E800D6A92D /* IssInformationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssInformationsTests.swift; sourceTree = "<group>"; };
 		443A90D524A647E800D6A92D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		443A90DA24A647E800D6A92D /* ISS informationsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ISS informationsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		443A90DE24A647E800D6A92D /* ISS_informationsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISS_informationsUITests.swift; sourceTree = "<group>"; };
+		443A90DE24A647E800D6A92D /* IssInformationsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssInformationsUITests.swift; sourceTree = "<group>"; };
 		443A90E024A647E800D6A92D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		443A90F124A6482000D6A92D /* HttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
 		443A90F324A64A7500D6A92D /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
@@ -138,7 +138,7 @@
 		443A90D224A647E800D6A92D /* ISS informationsTests */ = {
 			isa = PBXGroup;
 			children = (
-				443A90D324A647E800D6A92D /* ISS_informationsTests.swift */,
+				443A90D324A647E800D6A92D /* IssInformationsTests.swift */,
 				443A90D524A647E800D6A92D /* Info.plist */,
 			);
 			path = "ISS informationsTests";
@@ -147,7 +147,7 @@
 		443A90DD24A647E800D6A92D /* ISS informationsUITests */ = {
 			isa = PBXGroup;
 			children = (
-				443A90DE24A647E800D6A92D /* ISS_informationsUITests.swift */,
+				443A90DE24A647E800D6A92D /* IssInformationsUITests.swift */,
 				443A90E024A647E800D6A92D /* Info.plist */,
 			);
 			path = "ISS informationsUITests";
@@ -366,7 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				443A90D424A647E800D6A92D /* ISS_informationsTests.swift in Sources */,
+				443A90D424A647E800D6A92D /* IssInformationsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,7 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				443A90DF24A647E800D6A92D /* ISS_informationsUITests.swift in Sources */,
+				443A90DF24A647E800D6A92D /* IssInformationsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
