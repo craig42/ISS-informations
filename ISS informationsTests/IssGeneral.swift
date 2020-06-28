@@ -10,7 +10,7 @@ import XCTest
 import CoreLocation
 @testable import ISS_informations
 
-class IssPositionTests: XCTestCase {
+class IssGeneral: XCTestCase {
     func testIssPosition () {
         let expectation = self.expectation(description: "Iss position")
         let issPosition = IssPositionToView()

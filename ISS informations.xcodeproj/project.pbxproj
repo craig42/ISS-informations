@@ -21,7 +21,7 @@
 		443A90FB24A6507700D6A92D /* PeopleInSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A90FA24A6507700D6A92D /* PeopleInSpace.swift */; };
 		443A90FF24A6627C00D6A92D /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A90FE24A6627C00D6A92D /* Path.swift */; };
 		443A910124A6771700D6A92D /* IssPositionToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A910024A6771700D6A92D /* IssPositionToView.swift */; };
-		4449B86724A7AE4300F7A0CF /* IssPositionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4449B86624A7AE4300F7A0CF /* IssPositionTests.swift */; };
+		4449B86724A7AE4300F7A0CF /* IssGeneral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4449B86624A7AE4300F7A0CF /* IssGeneral.swift */; };
 		4449B86924A7B09A00F7A0CF /* SamplePeopleInSpace.json in Resources */ = {isa = PBXBuildFile; fileRef = 4449B86824A7B09A00F7A0CF /* SamplePeopleInSpace.json */; };
 		4449B86F24A7B13900F7A0CF /* SampleIssPassTimes.json in Resources */ = {isa = PBXBuildFile; fileRef = 4449B86E24A7B13900F7A0CF /* SampleIssPassTimes.json */; };
 		4449B87124A7B16400F7A0CF /* SampleIssNow.json in Resources */ = {isa = PBXBuildFile; fileRef = 4449B87024A7B16400F7A0CF /* SampleIssNow.json */; };
@@ -70,7 +70,7 @@
 		443A90FA24A6507700D6A92D /* PeopleInSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleInSpace.swift; sourceTree = "<group>"; };
 		443A90FE24A6627C00D6A92D /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
 		443A910024A6771700D6A92D /* IssPositionToView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssPositionToView.swift; sourceTree = "<group>"; };
-		4449B86624A7AE4300F7A0CF /* IssPositionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssPositionTests.swift; sourceTree = "<group>"; };
+		4449B86624A7AE4300F7A0CF /* IssGeneral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssGeneral.swift; sourceTree = "<group>"; };
 		4449B86824A7B09A00F7A0CF /* SamplePeopleInSpace.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SamplePeopleInSpace.json; sourceTree = "<group>"; };
 		4449B86E24A7B13900F7A0CF /* SampleIssPassTimes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SampleIssPassTimes.json; sourceTree = "<group>"; };
 		4449B87024A7B16400F7A0CF /* SampleIssNow.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SampleIssNow.json; sourceTree = "<group>"; };
@@ -146,7 +146,7 @@
 		443A90D224A647E800D6A92D /* ISS informationsTests */ = {
 			isa = PBXGroup;
 			children = (
-				4449B86624A7AE4300F7A0CF /* IssPositionTests.swift */,
+				4449B86624A7AE4300F7A0CF /* IssGeneral.swift */,
 				44EEF35424A8EA5C004D1C6B /* IssParsing.swift */,
 				443A90D524A647E800D6A92D /* Info.plist */,
 				4449B86824A7B09A00F7A0CF /* SamplePeopleInSpace.json */,
@@ -382,7 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44EEF35524A8EA5C004D1C6B /* IssParsing.swift in Sources */,
-				4449B86724A7AE4300F7A0CF /* IssPositionTests.swift in Sources */,
+				4449B86724A7AE4300F7A0CF /* IssGeneral.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
