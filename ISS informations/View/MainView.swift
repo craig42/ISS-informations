@@ -34,17 +34,19 @@ class ViewController: UIViewController, MKMapViewDelegate {
 
         })
         let peopleInSpace = PeopleInSpaceToView()
-        peopleInSpace.getPeopleInSpace(callback: { peopleText, numberOfLines in
+        peopleInSpace.getPeopleInSpace(callback: { peopleText in
             DispatchQueue.main.async {
                 self.peopleInSpaceLabel.text = peopleText
-                self.peopleInSpaceLabel.numberOfLines = numberOfLines
+                let numberOfLines = peopleText.components(separatedBy: "\n")
+                self.peopleInSpaceLabel.numberOfLines = numberOfLines.count
             }
         })
         let issPassTime = IssPassTimesToView()
-        issPassTime.getIssPassTimes(callback: { passTimeText, numberOfLines in
+        issPassTime.getIssPassTimes(callback: { passTimeText in
                 DispatchQueue.main.async {
                     self.issUpcoming.text = passTimeText
-                    self.issUpcoming.numberOfLines = numberOfLines
+                    let numberOfLines = passTimeText.components(separatedBy: "\n")
+                    self.issUpcoming.numberOfLines = numberOfLines.count
             }
         })
     }

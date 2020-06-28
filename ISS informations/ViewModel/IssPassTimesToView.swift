@@ -20,18 +20,17 @@ class IssPassTimesToView {
             }
         }
     }
-    var issPassTimeCallback: ((String, Int) -> Void)?
+    var issPassTimeCallback: ((String) -> Void)?
     var callIssPassTimes = false
     var textToDisplay = ""
-    var numberOfLines = 0
     var localTimeZoneAbbreviation: String { return TimeZone.current.abbreviation() ?? "" }
     var isCorrectLocation: Bool { return userLocation.longitude != 0.0 && userLocation.latitude != 0.0 }
-    func getIssPassTimes(callback : @escaping (String, Int) -> Void) {
+    func getIssPassTimes(callback : @escaping (String) -> Void) {
         startLocationServices()
         callIssPassTimes = true
         issPassTimeCallback = callback
     }
-    func getIssPassTimesWhenLocation (callback : @escaping (String, Int) -> Void) {
+    func getIssPassTimesWhenLocation (callback : @escaping (String) -> Void) {
         self.callIssPassTimes = false
         let httpService = HttpService<IssPassTimes>()
         var param = [String: String]()
@@ -41,13 +40,12 @@ class IssPassTimesToView {
             if statusCode == StatusCode.success {
                 if let data = httpService.data {
                     self.textToDisplay = "There is \(data.request.passes) passes : \n"
-                    self.numberOfLines += 1
                     for response in data.response {
                         self.textToDisplay += "at \(self.formatDate(response.risetime)) "
                         self.textToDisplay += "while \(response.duration) seconds\n"
-                        self.numberOfLines += 1
                     }
-                    callback(self.textToDisplay, self.numberOfLines)
+                    self.textToDisplay.removeLast()
+                    callback(self.textToDisplay)
                 }
             }
         })
