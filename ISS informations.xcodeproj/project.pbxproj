@@ -30,6 +30,9 @@
 		44BB19AF24A6929500FBC52C /* IssPassTimesToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BB19AE24A6929500FBC52C /* IssPassTimesToView.swift */; };
 		44BB19B124A6971900FBC52C /* LocationServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BB19B024A6971900FBC52C /* LocationServices.swift */; };
 		44EEF35524A8EA5C004D1C6B /* IssParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EEF35424A8EA5C004D1C6B /* IssParsing.swift */; };
+		44EEF35724A8FC8B004D1C6B /* IssStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EEF35624A8FC8B004D1C6B /* IssStructure.swift */; };
+		44EEF35924A9060A004D1C6B /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EEF35824A9060A004D1C6B /* UserLocation.swift */; };
+		44EEF35B24A90BAE004D1C6B /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EEF35A24A90BAE004D1C6B /* Http.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +82,9 @@
 		44BB19AE24A6929500FBC52C /* IssPassTimesToView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssPassTimesToView.swift; sourceTree = "<group>"; };
 		44BB19B024A6971900FBC52C /* LocationServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServices.swift; sourceTree = "<group>"; };
 		44EEF35424A8EA5C004D1C6B /* IssParsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssParsing.swift; sourceTree = "<group>"; };
+		44EEF35624A8FC8B004D1C6B /* IssStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssStructure.swift; sourceTree = "<group>"; };
+		44EEF35824A9060A004D1C6B /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
+		44EEF35A24A90BAE004D1C6B /* Http.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Http.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +154,9 @@
 			children = (
 				4449B86624A7AE4300F7A0CF /* IssGeneral.swift */,
 				44EEF35424A8EA5C004D1C6B /* IssParsing.swift */,
+				44EEF35624A8FC8B004D1C6B /* IssStructure.swift */,
+				44EEF35824A9060A004D1C6B /* UserLocation.swift */,
+				44EEF35A24A90BAE004D1C6B /* Http.swift */,
 				443A90D524A647E800D6A92D /* Info.plist */,
 				4449B86824A7B09A00F7A0CF /* SamplePeopleInSpace.json */,
 				4449B86E24A7B13900F7A0CF /* SampleIssPassTimes.json */,
@@ -381,8 +390,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44EEF35924A9060A004D1C6B /* UserLocation.swift in Sources */,
 				44EEF35524A8EA5C004D1C6B /* IssParsing.swift in Sources */,
 				4449B86724A7AE4300F7A0CF /* IssGeneral.swift in Sources */,
+				44EEF35724A8FC8B004D1C6B /* IssStructure.swift in Sources */,
+				44EEF35B24A90BAE004D1C6B /* Http.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

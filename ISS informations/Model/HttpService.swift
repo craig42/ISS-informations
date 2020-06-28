@@ -11,7 +11,7 @@ import os.log
 
 class HttpService<T: Codable> {
     var data: T?
-    func getRequest(path: String, param: [String: String]?, callback : @escaping (String) -> Void) {
+    func getRequest(path: String, param: [String: String]?, callback : @escaping (String?) -> Void) {
         let path = Configuration.slash + path
         let url = HttpRequest.makeURL(path: path, dict: param)
         HttpRequest.getHttp(url: url, body: "", callback: { data, error, statusCode in
@@ -19,6 +19,7 @@ class HttpService<T: Codable> {
                 callback(data)
             } else {
                 os_log("Error cannot get ISS position  %@", type: .error, "\(error)")
+                callback(nil)
             }
         })
     }
@@ -27,6 +28,10 @@ class HttpService<T: Codable> {
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             do {
+                guard let success = success else {
+                    callback(StatusCode.error)
+                    return
+                }
                 if let json = success.data(using: .utf8) {
                     let issPosition = try decoder.decode(T.self, from: json)
                     self.data = issPosition
@@ -34,6 +39,7 @@ class HttpService<T: Codable> {
                 }
             } catch {
                 os_log("Error cannot parse ISS position %@", type: .error, "\(error)")
+                callback(StatusCode.error)
             }
         })
     }

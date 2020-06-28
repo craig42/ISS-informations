@@ -16,7 +16,7 @@ class LocationServices: NSObject, CLLocationManagerDelegate {
     func run(callback: @escaping (CLLocation?) -> Void) {
         locationCallback = callback
         manager.delegate = self
-        manager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
+        manager.desiredAccuracy = kCLLocationAccuracyKilometer
         manager.requestWhenInUseAuthorization()
         locationServicesEnabled = CLLocationManager.locationServicesEnabled()
         if locationServicesEnabled {
@@ -38,9 +38,6 @@ class LocationServices: NSObject, CLLocationManagerDelegate {
         if let locationCallback = locationCallback {
             locationCallback(nil)
         }
-        manager.stopUpdatingLocation()
-    }
-    deinit {
         manager.stopUpdatingLocation()
     }
 }

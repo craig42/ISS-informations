@@ -41,10 +41,12 @@ class HttpRequest {
             os_log("StatusCode is : %@", type: .info, "\(httpStatus?.statusCode ?? 0)")
             os_log("Request : %@", type: .debug, "\(request)" )
             let responseString = String(data: data, encoding: .utf8)
-            if httpStatus?.statusCode == 200 {
-                callback(responseString ?? "", "", StatusCode.success)
-            } else {
-                callback("", responseString ?? "", StatusCode.error)
+            if let httpStatus = httpStatus, let responseString = responseString {
+                if httpStatus.statusCode == 200 {
+                    callback(responseString, "", StatusCode.success)
+                } else {
+                    callback("", responseString, StatusCode.error)
+                }
             }
         }
         task.resume()
