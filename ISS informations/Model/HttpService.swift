@@ -14,14 +14,16 @@ class HttpService<T: Codable> {
     func getRequest(path: String, param: [String: String]?, callback : @escaping (String?) -> Void) {
         let path = Configuration.slash + path
         let url = HttpRequest.makeURL(path: path, dict: param)
-        HttpRequest.getHttp(url: url, body: "", callback: { data, error, statusCode in
-            if statusCode == StatusCode.success {
-                callback(data)
-            } else {
-                os_log("Error cannot get ISS position  %@", type: .error, "\(error)")
-                callback(nil)
-            }
-        })
+        if let url = url {
+            HttpRequest.getHttp(url: url, body: "", callback: { data, error, statusCode in
+                if statusCode == StatusCode.success {
+                    callback(data)
+                } else {
+                    os_log("Error cannot get ISS position  %@", type: .error, "\(error)")
+                    callback(nil)
+                }
+            })
+        }
     }
     func getIssData(for endpoint: String, param: [String: String]?, callback: @escaping (StatusCode) -> Void) {
         getRequest(path: endpoint, param: param, callback: { success in

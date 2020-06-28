@@ -10,7 +10,7 @@ import Foundation
 import os.log
 
 class HttpRequest {
-    static func makeURL(path: String, dict: [String: String]?) -> URL {
+    static func makeURL(path: String, dict: [String: String]?) -> URL? {
         var urlComponents = URLComponents()
         urlComponents.scheme = Configuration.scheme
         urlComponents.host = Configuration.host
@@ -22,11 +22,12 @@ class HttpRequest {
                 urlComponents.queryItems?.append(URLQueryItem(name: name, value: value))
             }
         }
-        return urlComponents.url!
+        return urlComponents.url
     }
     static func getHttp(url: URL, body: String, callback : @escaping (String, String, StatusCode) -> Void ) {
         var request = URLRequest(url: url)
         request.httpMethod = Configuration.httpMethod
+        request.timeoutInterval = 20
         let postString = body
         request.httpBody = postString.data(using: .utf8)
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
