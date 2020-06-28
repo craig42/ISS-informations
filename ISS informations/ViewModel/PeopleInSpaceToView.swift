@@ -12,7 +12,7 @@ class PeopleInSpaceToView {
     var textToDisplay = ""
     func getPeopleInSpace (callback : @escaping (String) -> Void) {
         let httpService = HttpService<PeopleInSpace>()
-        httpService.getIssData(forData: Endpoints.peopleInSpace, param: nil, callback: { statusCode in
+        httpService.getIssData(for: Endpoints.peopleInSpace, param: nil, callback: { statusCode in
             if statusCode == StatusCode.success {
                 let data = httpService.data
                 if let data = data {

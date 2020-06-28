@@ -36,7 +36,7 @@ class IssPassTimesToView {
         var param = [String: String]()
         param["lat"] = String(userLocation.latitude)
         param["lon"] = String(userLocation.longitude)
-        httpService.getIssData(forData: Endpoints.issPass, param: param, callback: { statusCode in
+        httpService.getIssData(for: Endpoints.issPass, param: param, callback: { statusCode in
             if statusCode == StatusCode.success {
                 if let data = httpService.data {
                     self.textToDisplay = "There is \(data.request.passes) passes : \n"

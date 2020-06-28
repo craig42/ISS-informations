@@ -13,7 +13,7 @@ class IssPositionToView {
     var coordinate = CLLocationCoordinate2D()
     func getIssPosition(callback : @escaping (CLLocationCoordinate2D) -> Void) {
         let httpService = HttpService<IssJSONPosition>()
-        httpService.getIssData(forData: Endpoints.issPosition, param: nil, callback: { statusCode in
+        httpService.getIssData(for: Endpoints.issPosition, param: nil, callback: { statusCode in
             if statusCode == StatusCode.success {
                 let data = httpService.data
                 if let latitude = data?.issPosition.latitude,
