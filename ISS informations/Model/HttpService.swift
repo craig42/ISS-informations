@@ -14,9 +14,9 @@ class HttpService<T: Codable> {
     func getRequest(path: String, param: [String: String]?, callback : @escaping (String) -> Void) {
         let path = Configuration.slash + path
         let url = HttpRequest.makeURL(path: path, dict: param)
-        HttpRequest.getHttp(url: url, body: "", callback: { success, error, statusCode in
+        HttpRequest.getHttp(url: url, body: "", callback: { data, error, statusCode in
             if statusCode == StatusCode.success {
-                callback(success)
+                callback(data)
             } else {
                 os_log("Error cannot get ISS position  %@", type: .error, "\(error)")
             }
