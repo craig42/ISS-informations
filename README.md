@@ -11,6 +11,8 @@ It gives :
 
 ## Technical presentation
 
+This app was written in Swift 5.2.4.
+
 This app was done on the MVVM model that facilitates the separation of the development of the view from the development of the model.
 
 [SwiftLint](https://github.com/realm/SwiftLint) was used to enforce Swift style and conventions.
