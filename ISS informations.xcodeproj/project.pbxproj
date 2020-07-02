@@ -19,7 +19,6 @@
 		443A90F624A64BCD00D6A92D /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A90F524A64BCD00D6A92D /* HttpService.swift */; };
 		443A90F924A64E4600D6A92D /* IssPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A90F824A64E4600D6A92D /* IssPosition.swift */; };
 		443A90FB24A6507700D6A92D /* PeopleInSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A90FA24A6507700D6A92D /* PeopleInSpace.swift */; };
-		443A90FF24A6627C00D6A92D /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A90FE24A6627C00D6A92D /* Path.swift */; };
 		443A910124A6771700D6A92D /* IssPositionToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A910024A6771700D6A92D /* IssPositionToView.swift */; };
 		4449B86724A7AE4300F7A0CF /* IssGeneral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4449B86624A7AE4300F7A0CF /* IssGeneral.swift */; };
 		4449B86924A7B09A00F7A0CF /* SamplePeopleInSpace.json in Resources */ = {isa = PBXBuildFile; fileRef = 4449B86824A7B09A00F7A0CF /* SamplePeopleInSpace.json */; };
@@ -71,7 +70,6 @@
 		443A90F524A64BCD00D6A92D /* HttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
 		443A90F824A64E4600D6A92D /* IssPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssPosition.swift; sourceTree = "<group>"; };
 		443A90FA24A6507700D6A92D /* PeopleInSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleInSpace.swift; sourceTree = "<group>"; };
-		443A90FE24A6627C00D6A92D /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
 		443A910024A6771700D6A92D /* IssPositionToView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssPositionToView.swift; sourceTree = "<group>"; };
 		4449B86624A7AE4300F7A0CF /* IssGeneral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssGeneral.swift; sourceTree = "<group>"; };
 		4449B86824A7B09A00F7A0CF /* SamplePeopleInSpace.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SamplePeopleInSpace.json; sourceTree = "<group>"; };
@@ -135,15 +133,15 @@
 		443A90BB24A647E700D6A92D /* ISS informations */ = {
 			isa = PBXGroup;
 			children = (
+				44AB112424AE62B900E5E971 /* Worker */,
 				443A90F024A6482000D6A92D /* Model */,
 				443A90ED24A6481500D6A92D /* View */,
 				443A90EC24A6481000D6A92D /* ViewModel */,
 				443A90BC24A647E700D6A92D /* AppDelegate.swift */,
 				443A90F324A64A7500D6A92D /* Configuration.swift */,
 				443A90BE24A647E700D6A92D /* SceneDelegate.swift */,
-				443A90C224A647E700D6A92D /* Main.storyboard */,
+				44AB112224AE627F00E5E971 /* Storyboards */,
 				443A90C524A647E800D6A92D /* Assets.xcassets */,
-				443A90C724A647E800D6A92D /* LaunchScreen.storyboard */,
 				443A90CA24A647E800D6A92D /* Info.plist */,
 			);
 			path = "ISS informations";
@@ -195,23 +193,30 @@
 		443A90F024A6482000D6A92D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				443A90F724A64E2D00D6A92D /* JsonModel */,
-				443A90F124A6482000D6A92D /* HttpRequest.swift */,
-				443A90F524A64BCD00D6A92D /* HttpService.swift */,
-				44BB19B024A6971900FBC52C /* LocationServices.swift */,
+				443A90F824A64E4600D6A92D /* IssPosition.swift */,
+				443A90FA24A6507700D6A92D /* PeopleInSpace.swift */,
+				44BB19AC24A6922900FBC52C /* IssPassTimes.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		443A90F724A64E2D00D6A92D /* JsonModel */ = {
+		44AB112224AE627F00E5E971 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				443A90F824A64E4600D6A92D /* IssPosition.swift */,
-				443A90FA24A6507700D6A92D /* PeopleInSpace.swift */,
-				44BB19AC24A6922900FBC52C /* IssPassTimes.swift */,
-				443A90FE24A6627C00D6A92D /* Path.swift */,
+				443A90C724A647E800D6A92D /* LaunchScreen.storyboard */,
+				443A90C224A647E700D6A92D /* Main.storyboard */,
 			);
-			path = JsonModel;
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		44AB112424AE62B900E5E971 /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				443A90F124A6482000D6A92D /* HttpRequest.swift */,
+				443A90F524A64BCD00D6A92D /* HttpService.swift */,
+				44BB19B024A6971900FBC52C /* LocationServices.swift */,
+			);
+			path = Worker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,7 +383,6 @@
 				443A90FB24A6507700D6A92D /* PeopleInSpace.swift in Sources */,
 				443A910124A6771700D6A92D /* IssPositionToView.swift in Sources */,
 				443A90BF24A647E700D6A92D /* SceneDelegate.swift in Sources */,
-				443A90FF24A6627C00D6A92D /* Path.swift in Sources */,
 				443A90F624A64BCD00D6A92D /* HttpService.swift in Sources */,
 				44BB19AB24A68C2E00FBC52C /* PeopleInSpaceToView.swift in Sources */,
 				44BB19AD24A6922900FBC52C /* IssPassTimes.swift in Sources */,
