@@ -9,6 +9,10 @@ It gives :
 - The number of astronaut in space with her names.
 - And the next ISS passages at your position.
 
+## Screenshot
+
+/AppScreenshot.png
+
 ## Technical presentation
 
 This app was written in Swift 5.2.4.
