@@ -75,6 +75,7 @@
 		4449B86824A7B09A00F7A0CF /* SamplePeopleInSpace.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SamplePeopleInSpace.json; sourceTree = "<group>"; };
 		4449B86E24A7B13900F7A0CF /* SampleIssPassTimes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SampleIssPassTimes.json; sourceTree = "<group>"; };
 		4449B87024A7B16400F7A0CF /* SampleIssNow.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SampleIssNow.json; sourceTree = "<group>"; };
+		448D1D4224B8C0A300DBF5B8 /* ISS informations.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ISS informations.entitlements"; sourceTree = "<group>"; };
 		44BB19AA24A68C2E00FBC52C /* PeopleInSpaceToView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleInSpaceToView.swift; sourceTree = "<group>"; };
 		44BB19AC24A6922900FBC52C /* IssPassTimes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssPassTimes.swift; sourceTree = "<group>"; };
 		44BB19AE24A6929500FBC52C /* IssPassTimesToView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssPassTimesToView.swift; sourceTree = "<group>"; };
@@ -133,6 +134,7 @@
 		443A90BB24A647E700D6A92D /* ISS informations */ = {
 			isa = PBXGroup;
 			children = (
+				448D1D4224B8C0A300DBF5B8 /* ISS informations.entitlements */,
 				44AB112424AE62B900E5E971 /* Worker */,
 				443A90F024A6482000D6A92D /* Model */,
 				443A90ED24A6481500D6A92D /* View */,
@@ -563,6 +565,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "ISS informations/ISS informations.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4CPR929BWY;
 				INFOPLIST_FILE = "ISS informations/Info.plist";
@@ -572,6 +575,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "craig.ISS-informations";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -581,6 +585,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "ISS informations/ISS informations.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4CPR929BWY;
 				INFOPLIST_FILE = "ISS informations/Info.plist";
@@ -590,6 +595,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "craig.ISS-informations";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
