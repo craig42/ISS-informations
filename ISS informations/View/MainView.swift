@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainView.swift
 //  ISS informations
 //
 //  Created by Craig Josse on 26/06/2020.

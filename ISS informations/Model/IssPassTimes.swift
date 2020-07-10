@@ -1,7 +1,10 @@
-// This file was generated from JSON Schema using quicktype, do not modify it directly.
-// To parse the JSON, add this file to your project and do:
 //
-//   let issJSONPosition = try? newJSONDecoder().decode(IssJSONPosition.self, from: jsonData)
+//  IssPassTimes.swift
+//  ISS informations
+//
+//  Created by Craig Josse on 26/06/2020.
+//  Copyright © 2020 Craig Josse. All rights reserved.
+//
 
 import Foundation
 
