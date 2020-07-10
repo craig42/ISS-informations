@@ -11,7 +11,7 @@ It gives :
 
 ## Screenshot
 
-/AppScreenshot.png
+![App screenshot](/AppScreenshot.png "Screenshot")
 
 ## Technical presentation
 
